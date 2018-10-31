@@ -32,9 +32,8 @@ def space_replace_inverse(sentence):
         else:
             space = []
         if len(space) == 3:
-            sentence_stack.pop()
-            sentence_stack.pop()
-            sentence_stack.pop()
+            for _ in range(0, 3):
+                sentence_stack.pop()
             sentence_stack.append(' ')
 
     return ''.join(sentence_stack)
