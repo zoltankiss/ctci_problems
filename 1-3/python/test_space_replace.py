@@ -15,6 +15,12 @@ class TestSpaceReplace(unittest.TestCase):
         """
         self.assertEqual(space_replace.space_replace('this is a url'), 'this%20is%20a%20url')
 
+    def test_space_replace_with_extra_whitespace(self):
+        """
+        Replace spaces, with extra whitespace.
+        """
+        self.assertEqual(space_replace.space_replace('this is a url    '), 'this%20is%20a%20url')
+
     def test_inverse_space_replace(self):
         """
         Inverse replace spaces.

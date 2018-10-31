@@ -8,8 +8,12 @@ def space_replace(sentence):
     """
 
     sentence_lst = []
+    chars = list(sentence)
 
-    for char in sentence:
+    while chars[-1] == ' ':
+        chars.pop()
+
+    for char in chars:
         if char == ' ':
             sentence_lst.append('%20')
         else:
