@@ -21,9 +21,9 @@ def _string_chars_freq(string):
     chars = {}
 
     for char in string:
-        if char in chars.items():
+        if char in chars.keys():
             chars[char] += 1
         else:
-            chars[char] = 0
+            chars[char] = 1
 
     return chars
