@@ -1,25 +1,38 @@
 """
-Unit Tests for problem 1.6.
+Unit Tests for problem 1.5.
 """
 
 import unittest
-import compression
+import replacement
 
-class TestCompression(unittest.TestCase):
+class TestReplacement(unittest.TestCase):
     """
-    Compress strings.
+    See if a string can be transformed into another
+    in one operation (char replacement, deletion, insertion)
     """
-    def test_compression(self):
+    def test_replacement(self):
         """
         Test replacement.
         """
-        self.assertEqual(compression.compress('aaabbbb'), 'a3b4')
+        self.assertEqual(replacement.is_one_op_away('aabbcc', 'aadbcc'), True)
 
-    def test_when_compression_is_not_helpful(self):
+    def test_deletion(self):
+        """
+        Test deletion.
+        """
+        self.assertEqual(replacement.is_one_op_away('aabbcc', 'aabcc'), True)
+
+    def test_insertion(self):
+        """
+        Test insertion.
+        """
+        self.assertEqual(replacement.is_one_op_away('aabbcc', 'aabbbcc'), True)
+
+    def test_not_replacement(self):
         """
         Test negative case.
         """
-        self.assertEqual(compression.compress('abc'), 'abc')
+        self.assertEqual(replacement.is_one_op_away('aabbcc', 'aaddcc'), False)
 
 if __name__ == '__main__':
     unittest.main()
