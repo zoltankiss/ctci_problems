@@ -11,7 +11,7 @@ class TestCompression(unittest.TestCase):
     """
     def test_rotation(self):
         """
-        Test replacement.
+        5x5.
         """
         matrix = [
             [1, 2, 3, 4, 5],
@@ -32,7 +32,7 @@ class TestCompression(unittest.TestCase):
 
     def test_simple_rotation(self):
         """
-        Test replacement.
+        2x2.
         """
         matrix = [
             [1, 2],
@@ -47,7 +47,7 @@ class TestCompression(unittest.TestCase):
 
     def test_nine_by_nine_rotation(self):
         """
-        Test replacement.
+        3x3.
         """
         matrix = [
             [1, 2, 3],
