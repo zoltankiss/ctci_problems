@@ -1,7 +1,3 @@
-"""
-Find kth to last element
-"""
-
 import os
 import sys
 
@@ -12,9 +8,6 @@ sys.path.append(LIBPATH)
 import linked_lst
 
 def del_middle(node):
-    """
-    Runtime: O(n).
-    """
-    next = node.next
-    node.data = next.data
-    node.next = next.next
+    next_node = node.next
+    node.data = next_node.data
+    node.next = next_node.next

@@ -1,18 +1,8 @@
-"""
-Unit Tests for problem 2.3.
-"""
-
 import unittest
 import del_middle
 
 class TestKthElement(unittest.TestCase):
-    """
-    Delete middle element
-    """
     def test_del_middle(self):
-        """
-        Find kth to last element
-        """
         lst = del_middle.linked_lst.LinkedLstNode()
         lst.data = 1
         lst.append_to_tail(2)
