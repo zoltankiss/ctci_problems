@@ -1,5 +1,5 @@
 """
-Unit Tests for problem 1.7.
+Unit Tests for problem 1.8.
 """
 
 import unittest
