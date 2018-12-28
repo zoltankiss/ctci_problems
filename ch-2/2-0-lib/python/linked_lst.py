@@ -25,3 +25,11 @@ class LinkedLstNode:
         while lst_pointer != None:
             print(lst_pointer.data)
             lst_pointer = lst_pointer.next
+
+    def length(self):
+        node = self
+        c = 0
+        while node != None:
+            c += 1
+            node = node.next
+        return c
